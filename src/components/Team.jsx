@@ -20,13 +20,12 @@ const Team = () => {
             className="fade-in delay-1"
             frontContent={
               <>
-                <div className="team-image-placeholder">
-                  <div className="geo-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="geo-icon">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
+                <div className="team-image-placeholder" style={{ backgroundColor: '#111' }}>
+                  <img 
+                    src="/alejandro_pacheco.jpg" 
+                    alt="Ing. Alejandro Pacheco" 
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }}
+                  />
                 </div>
                 <div className="team-info">
                   <h3>Ing. Alejandro Pacheco</h3>
@@ -55,12 +54,11 @@ const Team = () => {
             frontContent={
               <>
                 <div className="team-image-placeholder">
-                  <div className="geo-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="geo-icon">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
+                  <img 
+                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Qori&backgroundColor=2a0a3a" 
+                    alt="Ing. Software" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
+                  />
                 </div>
                 <div className="team-info">
                   <h3>Ing. [Nombre Apellido]</h3>
