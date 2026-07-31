@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TiltCard from './TiltCard';
 
 const projectTypes = [
   { id: 'web', title: 'Sitio Web / Landing', price: 800, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> },
@@ -38,14 +39,15 @@ const Estimator = () => {
                 <label className="calc-label">1. ¿Qué tipo de software necesitas?</label>
                 <div className="calc-options">
                   {projectTypes.map(type => (
-                    <div 
+                    <TiltCard 
                       key={type.id} 
                       className={`calc-opt ${selectedType.id === type.id ? 'selected' : ''}`}
-                      onClick={() => setSelectedType(type)}
                     >
-                      <div className="calc-opt-icon">{type.icon}</div>
-                      <div className="calc-opt-title">{type.title}</div>
-                    </div>
+                      <div onClick={() => setSelectedType(type)} style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className="calc-opt-icon">{type.icon}</div>
+                        <div className="calc-opt-title">{type.title}</div>
+                      </div>
+                    </TiltCard>
                   ))}
                 </div>
               </div>
@@ -55,14 +57,15 @@ const Estimator = () => {
                 <label className="calc-label">2. Escala y Funcionalidades</label>
                 <div className="calc-options">
                   {projectScopes.map(scope => (
-                    <div 
+                    <TiltCard 
                       key={scope.id} 
                       className={`calc-opt ${selectedScope.id === scope.id ? 'selected' : ''}`}
-                      onClick={() => setSelectedScope(scope)}
                     >
-                      <div className="calc-opt-icon">{scope.icon}</div>
-                      <div className="calc-opt-title">{scope.title}</div>
-                    </div>
+                      <div onClick={() => setSelectedScope(scope)} style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className="calc-opt-icon">{scope.icon}</div>
+                        <div className="calc-opt-title">{scope.title}</div>
+                      </div>
+                    </TiltCard>
                   ))}
                 </div>
               </div>
@@ -72,7 +75,7 @@ const Estimator = () => {
             <div className="calc-result-box">
               <div className="calc-result-content">
                 <span className="result-label">Estimado Aproximado</span>
-                <div className="estimate-price">{estimatedPrice.toLocaleString()} dólares</div>
+                <div className="estimate-price">S/ {estimatedPrice.toLocaleString()}</div>
                 <div className="estimate-time">Tiempo aprox: {selectedScope.time}</div>
                 <p className="result-note">*Incluye garantía de código, despliegue en servidor y capacitación.</p>
               </div>

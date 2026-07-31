@@ -12,17 +12,6 @@ const TiltCard = ({ children, className = '' }) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -3;
-    const rotateY = ((x - centerX) / centerX) * 3;
-
-    setStyle({
-      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`,
-      transition: 'none'
-    });
-
     const xPercent = (x / rect.width) * 100;
     const yPercent = (y / rect.height) * 100;
 
@@ -34,10 +23,6 @@ const TiltCard = ({ children, className = '' }) => {
   };
 
   const handleMouseLeave = () => {
-    setStyle({
-      transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
-      transition: 'transform 0.5s ease'
-    });
     setGlareStyle({
       opacity: 0,
       transition: 'opacity 0.5s ease'
