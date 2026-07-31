@@ -2,7 +2,7 @@ import React from 'react';
 
 const Team = () => {
   return (
-    <section id="equipo" className="section bg-darker">
+    <section id="equipo" className="team-section">
       <div className="container">
         <div className="section-header text-center fade-in">
           <span className="badge">LIDERAZGO TÉCNICO</span>
