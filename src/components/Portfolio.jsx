@@ -9,7 +9,7 @@ const Portfolio = () => {
           
           <div className="portfolio-card fade-in delay-1">
             <div className="portfolio-img-placeholder">
-              <span>[Imagen QoriRest Dashboard]</span>
+              <img src="/images/qorirest.jpg" alt="QoriRest Dashboard Interface" />
             </div>
             <div className="portfolio-content">
               <span className="portfolio-tag">SaaS Restaurantes</span>
@@ -21,7 +21,7 @@ const Portfolio = () => {
 
           <div className="portfolio-card fade-in delay-2">
             <div className="portfolio-img-placeholder">
-              <span>[Imagen Software Logístico]</span>
+              <img src="/images/logistics.jpg" alt="Logistics Dashboard Interface" />
             </div>
             <div className="portfolio-content">
               <span className="portfolio-tag">Enterprise / A Medida</span>

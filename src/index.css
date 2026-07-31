@@ -672,6 +672,17 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     justify-content: center;
     color: var(--text-secondary);
     border-bottom: 1px solid var(--surface-border);
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-card:hover .portfolio-img-placeholder img {
+    transform: scale(1.05);
 }
 .portfolio-content {
     padding: 30px;
