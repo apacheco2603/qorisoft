@@ -469,3 +469,122 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     .hamburger.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
     .hamburger.active span:nth-child(2) { transform: translateY(-5px) rotate(-45deg); }
 }
+
+/* Estimator Calculator */
+.estimator {
+    padding: 120px 0;
+    background-color: var(--bg-color);
+}
+
+.calc-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border);
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.calc-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.calc-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--text-primary);
+}
+
+.calc-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.calc-opt {
+    background-color: var(--bg-color);
+    border: 1px solid var(--surface-border);
+    padding: 20px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    text-align: center;
+}
+
+.calc-opt:hover {
+    border-color: var(--accent-color);
+}
+
+.calc-opt.selected {
+    border-color: var(--accent-color);
+    background: linear-gradient(180deg, rgba(226, 188, 87, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    box-shadow: inset 0 2px 0 var(--accent-color);
+}
+
+.calc-opt-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.calc-opt-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.calc-result-box {
+    background-color: var(--bg-color);
+    border: 1px solid var(--surface-border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result-label {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.estimate-price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 15px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.estimate-time {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.result-note {
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.4 !important;
+}
+
+@media (max-width: 900px) {
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

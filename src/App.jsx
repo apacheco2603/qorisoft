@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Estimator from './components/Estimator';
 import ValueProp from './components/ValueProp';
 import Footer from './components/Footer';
 
@@ -32,6 +33,7 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Estimator />
       <ValueProp />
       <Footer />
     </>
