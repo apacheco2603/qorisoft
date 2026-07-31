@@ -291,9 +291,9 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     background-blend-mode: overlay;
 }
 
-.bento-item:nth-child(1) { background-image: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6)), url('/images/bento_1.jpg'); }
-.bento-item:nth-child(2) { background-image: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6)), url('/images/bento_2.jpg'); }
-.bento-item:nth-child(3) { background-image: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6)), url('/images/bento_3.jpg'); }
+.bento-item:nth-child(1) { background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('/images/bento_1.jpg'); }
+.bento-item:nth-child(2) { background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('/images/bento_2.jpg'); }
+.bento-item:nth-child(3) { background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('/images/bento_3.jpg'); }
 
 .bento-item:hover {
     background-color: #0a0a0a;
