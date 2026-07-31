@@ -35,7 +35,7 @@ const Team = () => {
             }
             backContent={
               <>
-                <h4 style={{ color: 'var(--accent-color)', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>Visión Estratégica</h4>
+                <h4 className="gold-gradient-text" style={{ marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>Visión Estratégica</h4>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '25px', lineHeight: '1.6' }}>
                   Experto en arquitecturas de alta disponibilidad y soluciones Cloud B2B. Lidero el desarrollo de ecosistemas escalables enfocados en conversión y rendimiento.
                 </p>
@@ -55,20 +55,20 @@ const Team = () => {
               <>
                 <div className="team-image-placeholder">
                   <img 
-                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Qori&backgroundColor=2a0a3a" 
-                    alt="Ing. Software" 
+                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Franco&backgroundColor=2a0a3a" 
+                    alt="Ing. Franco Gutiérrez" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
                   />
                 </div>
                 <div className="team-info">
-                  <h3>Ing. [Nombre Apellido]</h3>
+                  <h3>Ing. Franco Gutiérrez</h3>
                   <span className="team-role">CTO & Cloud Architect</span>
                 </div>
               </>
             }
             backContent={
               <>
-                <h4 style={{ color: 'var(--accent-color)', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>Innovación Técnica</h4>
+                <h4 className="gold-gradient-text" style={{ marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>Innovación Técnica</h4>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '25px', lineHeight: '1.6' }}>
                   Especialista en modernización de infraestructuras, DevOps y seguridad. Mi enfoque es asegurar que cada línea de código aporte valor y resiliencia al sistema.
                 </p>

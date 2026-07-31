@@ -36,6 +36,25 @@ const AbstractShape = () => {
     return pos;
   }, []);
 
+  const dotTexture = useMemo(() => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d');
+    
+    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gradient.addColorStop(0, 'rgba(255, 233, 133, 1)');
+    gradient.addColorStop(0.5, 'rgba(226, 188, 87, 0.6)');
+    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(32, 32, 32, 0, Math.PI * 2);
+    ctx.fill();
+    
+    return new THREE.CanvasTexture(canvas);
+  }, []);
+
   useFrame((state, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.x += delta * 0.1;
@@ -50,7 +69,16 @@ const AbstractShape = () => {
           <bufferGeometry>
             <bufferAttribute attach="attributes-position" count={pointsCount} array={positions} itemSize={3} />
           </bufferGeometry>
-          <pointsMaterial color="#8b6b23" size={0.03} sizeAttenuation={true} transparent={true} opacity={0.6} />
+          <pointsMaterial 
+            map={dotTexture}
+            color="#FFE985" 
+            size={0.12} 
+            sizeAttenuation={true} 
+            transparent={true} 
+            opacity={0.85} 
+            depthWrite={false}
+            blending={THREE.AdditiveBlending}
+          />
         </points>
         <mesh>
           <icosahedronGeometry args={[1.5, 0]} />

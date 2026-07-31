@@ -35,6 +35,15 @@ function App() {
 
   return (
     <>
+      <svg style={{ height: 0, width: 0, position: 'absolute', pointerEvents: 'none' }} aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#8B6615" />
+            <stop offset="50%" stopColor="#FFE985" />
+            <stop offset="100%" stopColor="#8B6615" />
+          </linearGradient>
+        </defs>
+      </svg>
       <Navbar />
       <Hero />
       <TechStack />
