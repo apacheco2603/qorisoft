@@ -38,6 +38,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+::selection {
+    background: rgba(168, 85, 247, 0.45);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: rgba(168, 85, 247, 0.45);
+    color: #ffffff;
+}
+
+*:focus {
+    outline: none;
 }
 
 html {

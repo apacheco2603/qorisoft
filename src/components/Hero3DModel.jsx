@@ -111,8 +111,13 @@ const Hero3DModel = () => {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden' }}>
       <Canvas dpr={[1, 1.5]} performance={{ min: 0.8 }} camera={{ position: [0, 0, 8], fov: 45 }}>
-        {/* Iluminación base ambiental realista */}
-        <Environment preset="city" environmentIntensity={0.3} />
+        {/* Environment nocturno sin reflejos azules */}
+        <Environment preset="night" environmentIntensity={0.5} />
+        
+        {/* Iluminación violeta dedicada para la escena 3D */}
+        <ambientLight intensity={0.6} color="#9333ea" />
+        <pointLight position={[-5, 5, 5]} intensity={120} color="#a855f7" />
+        <pointLight position={[5, -5, 3]} intensity={80} color="#FFE985" />
         
         {/* Luz que siempre sigue a la cámara desde la izquierda superior */}
         <CameraLight />
