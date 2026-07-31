@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TechStack from './components/TechStack';
+import Team from './components/Team';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Estimator from './components/Estimator';
@@ -37,6 +38,7 @@ function App() {
       <Navbar />
       <Hero />
       <TechStack />
+      <Team />
       <Services />
       <Portfolio />
       <Estimator />

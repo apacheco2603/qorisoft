@@ -841,3 +841,83 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     }
 }
 
+/* NAVBAR SCROLLED STATE */
+.navbar {
+  transition: background 0.3s ease, border-bottom 0.3s ease, padding 0.3s ease;
+}
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--surface-border);
+  padding: 15px 0;
+}
+
+/* TEAM SECTION */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+.team-card {
+  background: var(--surface-color);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+.team-image-placeholder {
+  height: 250px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--surface-border);
+}
+.geo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(226, 188, 87, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--accent-color);
+}
+.geo-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent-color);
+}
+.team-info {
+  padding: 25px;
+  text-align: center;
+}
+.team-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.team-role {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+.team-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.team-social:hover {
+  color: #fff;
+}

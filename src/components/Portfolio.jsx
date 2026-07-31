@@ -1,4 +1,5 @@
 import React from 'react';
+import TiltCard from './TiltCard';
 
 const Portfolio = () => {
   return (
@@ -7,7 +8,7 @@ const Portfolio = () => {
         <h2 className="section-title fade-in">Casos de Éxito</h2>
         <div className="portfolio-grid">
           
-          <div className="portfolio-card fade-in delay-1">
+          <TiltCard className="portfolio-card fade-in delay-1">
             <div className="portfolio-img-placeholder">
               <img src="/images/qorirest.jpg" alt="QoriRest Dashboard Interface" />
             </div>
@@ -17,9 +18,9 @@ const Portfolio = () => {
               <p>Sistema integral en la nube para la gestión de restaurantes. Incluye facturación electrónica, control de inventario en tiempo real y comandas móviles.</p>
               <a href="#" className="portfolio-link">Ver Caso de Estudio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
-          </div>
+          </TiltCard>
 
-          <div className="portfolio-card fade-in delay-2">
+          <TiltCard className="portfolio-card fade-in delay-2">
             <div className="portfolio-img-placeholder">
               <img src="/images/logistics.jpg" alt="Logistics Dashboard Interface" />
             </div>
@@ -29,7 +30,7 @@ const Portfolio = () => {
               <p>Desarrollo a medida de un ERP logístico con rastreo GPS, optimización de rutas mediante algoritmos propios y un panel administrativo de alto rendimiento.</p>
               <a href="#" className="portfolio-link">Ver Caso de Estudio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
-          </div>
+          </TiltCard>
 
         </div>
       </div>
