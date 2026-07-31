@@ -19,7 +19,7 @@ const CameraLight = () => {
 const AbstractShape = () => {
   const groupRef = useRef();
 
-  const pointsCount = 2000;
+  const pointsCount = 600;
   const positions = useMemo(() => {
     const pos = new Float32Array(pointsCount * 3);
     for (let i = 0; i < pointsCount; i++) {
@@ -38,18 +38,18 @@ const AbstractShape = () => {
 
   const dotTexture = useMemo(() => {
     const canvas = document.createElement('canvas');
-    canvas.width = 64;
-    canvas.height = 64;
+    canvas.width = 32;
+    canvas.height = 32;
     const ctx = canvas.getContext('2d');
     
-    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    const gradient = ctx.createRadialGradient(16, 16, 0, 16, 16, 16);
     gradient.addColorStop(0, 'rgba(255, 233, 133, 1)');
     gradient.addColorStop(0.5, 'rgba(226, 188, 87, 0.6)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
     ctx.fillStyle = gradient;
     ctx.beginPath();
-    ctx.arc(32, 32, 32, 0, Math.PI * 2);
+    ctx.arc(16, 16, 16, 0, Math.PI * 2);
     ctx.fill();
     
     return new THREE.CanvasTexture(canvas);
@@ -63,7 +63,7 @@ const AbstractShape = () => {
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
+    <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.5}>
       <group ref={groupRef}>
         <points>
           <bufferGeometry>
@@ -98,7 +98,7 @@ const AbstractShape = () => {
 const Hero3DModel = () => {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden' }}>
-      <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+      <Canvas dpr={[1, 1.5]} performance={{ min: 0.8 }} camera={{ position: [0, 0, 8], fov: 45 }}>
         {/* Iluminación base ambiental realista */}
         <Environment preset="city" environmentIntensity={0.3} />
         

@@ -26,6 +26,14 @@
     filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.4));
 }
 
+.violet-gradient-text {
+    background: linear-gradient(135deg, #f3e8ff 0%, #c084fc 45%, #9333ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6));
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -206,6 +214,22 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     padding-bottom: 4px;
     text-transform: uppercase;
     display: inline-block;
+    z-index: 1;
+}
+
+.logo-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 45px;
+    background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.65) 0%, rgba(147, 51, 234, 0.25) 55%, transparent 75%);
+    filter: blur(14px);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
 }
 
 .logo-placeholder::after {
@@ -796,9 +820,15 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     display: inline-block;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent-color);
-    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    padding: 3px 12px;
+    background: rgba(147, 51, 234, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: #c084fc;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
 }
 .portfolio-content h3 {
     margin-bottom: 15px;
@@ -943,9 +973,9 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
 }
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #FFE985;
-    box-shadow: 0 0 15px rgba(255, 233, 133, 0.15);
-    background: rgba(226, 188, 87, 0.05);
+    border-color: #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+    background: rgba(168, 85, 247, 0.06);
 }
 
 @media (max-width: 900px) {
@@ -981,16 +1011,15 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
 }
 .badge {
   display: inline-block;
-  padding: 8px 16px;
-  background: rgba(255, 233, 133, 0.05);
-  border: 1px solid #FFE985;
+  padding: 8px 20px;
+  background: rgba(147, 51, 234, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #d8b4fe;
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 2px;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
 }
 .section-subtitle {
   max-width: 600px;
@@ -1069,4 +1098,48 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
 }
 .team-social:hover {
   opacity: 0.8;
+}
+
+/* RESPONSIVE DESIGN (MOBILE & TABLETS) */
+@media (max-width: 768px) {
+    h1 { font-size: 2.3rem !important; margin-bottom: 1.5rem !important; text-align: center !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.4rem !important; }
+    .section-title { font-size: 2.2rem !important; margin-bottom: 2rem !important; text-align: center !important; }
+    
+    .container { width: 92%; }
+    
+    /* Navbar Mobile */
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+    
+    /* Hero Mobile */
+    .hero { min-height: auto; padding: 120px 0 60px; }
+    .hero-content p { font-size: 1.05rem !important; text-align: center !important; margin-bottom: 2rem !important; }
+    .hero-stats {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        margin-top: 2.5rem !important;
+    }
+    .stat-item { text-align: center; }
+    .stat-item h2 { font-size: 2.4rem !important; }
+    .stat-item p { font-size: 0.75rem !important; }
+    .hero-ambient-glow { width: 340px; height: 340px; right: -50px; filter: blur(50px); }
+    
+    /* Bento & Services Mobile */
+    .services { padding: 60px 0; }
+    .bento-grid { grid-template-columns: 1fr; gap: 20px; }
+    
+    /* Estimator Mobile */
+    .calc-card { padding: 20px; }
+    .calc-grid { grid-template-columns: 1fr; gap: 25px; }
+    
+    /* Portfolio & Team Mobile */
+    .portfolio-grid, .team-grid { grid-template-columns: 1fr; gap: 25px; }
+    
+    /* Contact Mobile */
+    .contact-container { grid-template-columns: 1fr; gap: 30px; }
+    .contact-form-wrapper { padding: 25px 18px; }
 }

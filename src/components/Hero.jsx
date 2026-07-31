@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-ambient-glow" />
       <Hero3DModel />
       <div className="container hero-content" style={{ position: 'relative', zIndex: 10, pointerEvents: 'none', maxWidth: '1200px', width: '100%', userSelect: 'none' }}>
-        <h1 className="fade-in" style={{ pointerEvents: 'auto', textAlign: 'left', marginBottom: '2rem' }}>Software<br/>del Futuro para<br/>Tu Empresa.</h1>
+        <h1 className="fade-in" style={{ pointerEvents: 'auto', textAlign: 'left', marginBottom: '2rem' }}>Software<br/>del <span className="violet-gradient-text">Futuro</span> para<br/>Tu Empresa.</h1>
         
         <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
           <p className="fade-in delay-1" style={{ pointerEvents: 'auto', textAlign: 'right', maxWidth: '600px', margin: 0 }}>
