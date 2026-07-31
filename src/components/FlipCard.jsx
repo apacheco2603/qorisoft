@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FlipCard = ({ frontContent, backContent, className = '' }) => {
+const FlipCard = ({ frontContent, backContent, className = '', frontStyle = {}, backStyle = {} }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -32,7 +32,8 @@ const FlipCard = ({ frontContent, backContent, className = '' }) => {
             backgroundColor: 'var(--surface-color)',
             border: '1px solid var(--surface-border)',
             borderRadius: '12px',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            ...frontStyle
           }}
         >
           {frontContent}
@@ -54,7 +55,8 @@ const FlipCard = ({ frontContent, backContent, className = '' }) => {
             alignItems: 'center',
             justifyContent: 'center',
             padding: '30px',
-            textAlign: 'center'
+            textAlign: 'center',
+            ...backStyle
           }}
         >
           {backContent}
