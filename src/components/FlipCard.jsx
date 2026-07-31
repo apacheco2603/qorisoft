@@ -8,7 +8,8 @@ const FlipCard = ({ frontContent, backContent, className = '', frontStyle = {}, 
       className={`flip-card-wrapper ${className}`} 
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
-      style={{ perspective: '1000px', backgroundColor: 'transparent', minHeight: '400px' }}
+      onClick={() => setIsFlipped(!isFlipped)}
+      style={{ perspective: '1000px', backgroundColor: 'transparent', minHeight: '400px', cursor: 'pointer' }}
     >
       <div 
         className="flip-card-inner" 

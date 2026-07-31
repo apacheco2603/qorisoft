@@ -10,8 +10,11 @@ const Hero = () => {
         <h1 className="fade-in" style={{ pointerEvents: 'auto', textAlign: 'left', marginBottom: '2rem' }}>Software<br/>del <span className="violet-gradient-text">Futuro</span> para<br/>Tu Empresa.</h1>
         
         <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
-          <p className="fade-in delay-1" style={{ pointerEvents: 'auto', textAlign: 'right', maxWidth: '600px', margin: 0 }}>
+          <p className="fade-in delay-1 hero-desc-desktop" style={{ pointerEvents: 'auto', textAlign: 'right', maxWidth: '600px', margin: 0 }}>
             En <strong>QoriSoft</strong> diseñamos y desarrollamos soluciones tecnológicas de alto rendimiento: software a medida, aplicaciones móviles, sistemas integrales para restaurantes, desarrollo web avanzado y consultoría en la nube.
+          </p>
+          <p className="fade-in delay-1 hero-desc-mobile" style={{ pointerEvents: 'auto', textAlign: 'center', margin: '0 auto', maxWidth: '90%' }}>
+            Desarrollo de software a medida, apps móviles y soluciones cloud de alto rendimiento para tu empresa.
           </p>
         </div>
 

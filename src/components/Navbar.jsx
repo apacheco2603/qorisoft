@@ -36,6 +36,7 @@ const Navbar = () => {
         <div className={`hamburger ${menuActive ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
+          <span></span>
         </div>
       </div>
     </header>

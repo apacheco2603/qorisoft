@@ -57,8 +57,20 @@ const AbstractShape = () => {
 
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.x += delta * 0.1;
-      groupRef.current.rotation.y += delta * 0.15;
+      // Smoothly interpolate 3D model rotation to follow the cursor position dynamically
+      const targetRotationY = state.pointer.x * 1.2;
+      const targetRotationX = -state.pointer.y * 0.8;
+
+      groupRef.current.rotation.y = THREE.MathUtils.lerp(
+        groupRef.current.rotation.y,
+        targetRotationY + state.clock.getElapsedTime() * 0.25,
+        0.05
+      );
+      groupRef.current.rotation.x = THREE.MathUtils.lerp(
+        groupRef.current.rotation.x,
+        targetRotationX,
+        0.05
+      );
     }
   });
 
