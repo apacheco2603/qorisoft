@@ -31,7 +31,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; 2026 QoriSoft Technologies (qorisoft.com). Todos los derechos reservados.</p>
           <div className="legal-links">
-            <p>Diseñado con Excelencia & Código Limpio.</p>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Política de Cookies</a>
           </div>
         </div>
       </div>
