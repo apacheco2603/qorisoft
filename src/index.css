@@ -284,7 +284,6 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    overflow: hidden;
     transition: background-color var(--transition-speed);
     background-size: cover;
     background-position: center;
@@ -303,6 +302,11 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
     grid-column: span 2;
 }
 
+.bento-content {
+    transform: translateZ(50px);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
 .bento-content h3 {
     margin-bottom: 20px;
 }
@@ -657,8 +661,8 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
 .portfolio-card {
     background-color: var(--surface-color);
     border: 1px solid var(--surface-border);
-    overflow: hidden;
     transition: transform 0.3s ease;
+    transform-style: preserve-3d;
 }
 .portfolio-card:hover {
     transform: translateY(-5px);
@@ -683,6 +687,11 @@ p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.2rem; font
 }
 .portfolio-card:hover .portfolio-img-placeholder img {
     transform: scale(1.05);
+}
+.portfolio-img-placeholder, .portfolio-content {
+    transform: translateZ(30px);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
 }
 .portfolio-content {
     padding: 30px;
