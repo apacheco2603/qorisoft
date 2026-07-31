@@ -8,27 +8,30 @@ const Footer = () => {
           <div className="logo-placeholder">QORISOFT</div>
           <div className="footer-links-grid">
             <div>
-              <h4>Acerca de Qorisoft</h4>
-              <a href="#">Liderazgo</a>
-              <a href="#">Nuestra Propuesta</a>
+              <h4>Navegación</h4>
+              <a href="#home">Inicio</a>
+              <a href="#services">Capacidades</a>
+              <a href="#about">Sobre Nosotros</a>
             </div>
             <div>
-              <h4>Capacidades</h4>
-              <a href="#">Desarrollo de Software</a>
-              <a href="#">Consultoría IT</a>
+              <h4>Soluciones</h4>
+              <a href="#">Desarrollo a Medida</a>
+              <a href="#">QoriRest Restaurantes</a>
+              <a href="#">Desarrollo Web Pro</a>
+              <a href="#">Consultoría IT & Cloud</a>
             </div>
             <div>
-              <h4>Síganos</h4>
-              <a href="#">LinkedIn</a>
-              <a href="#">Twitter</a>
+              <h4>Contacto Oficial</h4>
+              <a href="#">qorisoft.com</a>
+              <a href="mailto:contacto@qorisoft.com">contacto@qorisoft.com</a>
+              <a href="#">Lunes a Sábado</a>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 Qorisoft. Todos los derechos reservados.</p>
+          <p>&copy; 2026 QoriSoft Technologies (qorisoft.com). Todos los derechos reservados.</p>
           <div className="legal-links">
-            <a href="#">Privacidad</a>
-            <a href="#">Términos de Uso</a>
+            <p>Diseñado con Excelencia & Código Limpio.</p>
           </div>
         </div>
       </div>
