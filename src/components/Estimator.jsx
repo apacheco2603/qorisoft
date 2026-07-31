@@ -72,7 +72,7 @@ const Estimator = () => {
             <div className="calc-result-box">
               <div className="calc-result-content">
                 <span className="result-label">Estimado Aproximado</span>
-                <div className="estimate-price">${estimatedPrice.toLocaleString()} USD</div>
+                <div className="estimate-price">{estimatedPrice.toLocaleString()} dólares</div>
                 <div className="estimate-time">Tiempo aprox: {selectedScope.time}</div>
                 <p className="result-note">*Incluye garantía de código, despliegue en servidor y capacitación.</p>
               </div>
