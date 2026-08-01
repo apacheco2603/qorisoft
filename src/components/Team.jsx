@@ -53,11 +53,11 @@ const Team = () => {
             className="fade-in delay-2"
             frontContent={
               <>
-                <div className="team-image-placeholder">
+                <div className="team-image-placeholder" style={{ backgroundColor: '#111' }}>
                   <img 
-                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Franco&backgroundColor=2a0a3a" 
+                    src="/franco_gutierrez.jpg" 
                     alt="Ing. Franco Gutiérrez" 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }}
                   />
                 </div>
                 <div className="team-info">
