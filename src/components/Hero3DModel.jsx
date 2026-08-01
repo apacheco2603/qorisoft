@@ -55,21 +55,34 @@ const AbstractShape = () => {
     return new THREE.CanvasTexture(canvas);
   }, []);
 
+  const mouseRef = useRef({ x: 0, y: 0 });
+
+  React.useEffect(() => {
+    const handleMouseMove = (e) => {
+      mouseRef.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseRef.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    };
+    window.addEventListener('pointermove', handleMouseMove);
+    return () => window.removeEventListener('pointermove', handleMouseMove);
+  }, []);
+
   useFrame((state, delta) => {
     if (groupRef.current) {
-      // Smoothly interpolate 3D model rotation to follow the cursor position dynamically
-      const targetRotationY = state.pointer.x * 1.2;
-      const targetRotationX = -state.pointer.y * 0.8;
+      const px = mouseRef.current.x || state.pointer.x;
+      const py = mouseRef.current.y || state.pointer.y;
+
+      const targetRotationY = px * 1.5;
+      const targetRotationX = -py * 1.0;
 
       groupRef.current.rotation.y = THREE.MathUtils.lerp(
         groupRef.current.rotation.y,
-        targetRotationY + state.clock.getElapsedTime() * 0.25,
-        0.05
+        targetRotationY + state.clock.getElapsedTime() * 0.2,
+        0.06
       );
       groupRef.current.rotation.x = THREE.MathUtils.lerp(
         groupRef.current.rotation.x,
         targetRotationX,
-        0.05
+        0.06
       );
     }
   });
