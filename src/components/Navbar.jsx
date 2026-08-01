@@ -30,6 +30,7 @@ const Navbar = () => {
         <nav className={`nav-links ${menuActive ? 'active' : ''}`}>
           <a href="#home" onClick={() => setMenuActive(false)}>INICIO</a>
           <a href="#services" onClick={() => setMenuActive(false)}>CAPACIDADES</a>
+          <a href="#pricing" onClick={() => setMenuActive(false)}>PLANES</a>
           <a href="#about" onClick={() => setMenuActive(false)}>NOSOTROS</a>
           <a href="#contact" onClick={() => setMenuActive(false)}>CONTACTO</a>
         </nav>

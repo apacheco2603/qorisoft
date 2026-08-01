@@ -5,7 +5,7 @@ import TechStack from './components/TechStack';
 import Team from './components/Team';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import Estimator from './components/Estimator';
+import Pricing from './components/Pricing';
 import ValueProp from './components/ValueProp';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -50,7 +50,7 @@ function App() {
       <Team />
       <Services />
       <Portfolio />
-      <Estimator />
+      <Pricing />
       <ValueProp />
       <FAQ />
       <Contact />
