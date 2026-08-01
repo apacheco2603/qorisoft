@@ -5,12 +5,15 @@ const ValueProp = () => {
     <section className="value-prop" id="about">
       <div className="container">
         <div className="value-content fade-in">
-          <h2>Impulsando la Transformación Digital en QoriSoft.</h2>
+          <h2>UNA VISIÓN COMPARTIDA PARA TRANSFORMAR IDEAS EN TECNOLOGÍA.</h2>
           <p>
-            Fundada por ingenieros en software apasionados por la tecnología moderna, <strong>QoriSoft</strong> nació para ofrecer desarrollo de código limpio, arquitecturas escalables y soluciones comerciales ágiles para empresas de todos los tamaños.
+            <strong>QoriSoft</strong> nació a partir de una visión en común: ayudar a empresas y emprendedores a aprovechar la tecnología para resolver problemas reales y alcanzar nuevos objetivos.
           </p>
-          <p style={{ marginTop: '-1.5rem', marginBottom: '3rem' }}>
-            Nuestro compromiso es combinar un diseño visual impecable con una ingeniería robusta para que cada producto que construimos sea rápido, seguro y genere resultados reales de negocio.
+          <p>
+            Como ingenieros apasionados por el software, decidimos unir nuestra experiencia y creatividad para construir soluciones digitales de calidad, combinando buenas prácticas de ingeniería con un enfoque centrado en las personas.
+          </p>
+          <p style={{ marginBottom: '3rem' }}>
+            Nuestro objetivo es simple: crear tecnología que impulse el crecimiento de nuestros clientes.
           </p>
           <a href="#contact" className="btn-corporate outline">
             Contactar con los Fundadores
